@@ -1,3 +1,4 @@
+from operator import itemgetter
 
 class Street:
     def __init__(self, id, name):
@@ -18,7 +19,7 @@ class HouseStreet:
 
 streets = [Street(1, 'Lenina street'), 
     Street(2, 'Kirova'), 
-    Street(3, 'Sovetskaya street')
+    Street(3, 'Sovetsya street'),
     ]
 
 houses = [House(1, 12, 1000, 1),
@@ -68,7 +69,7 @@ def task2():
         if (result[street.name] != 0):
             result[street.name] /= count
             result[street.name] = round(result[street.name], 2)
-    return sorted(result.items(),reverse=False)
+    return sorted(result.items(), key = itemgetter(1),reverse=False)
 
 def task3():
     # Свойства класса дом не имеют полей, которые содержат буквы. 
