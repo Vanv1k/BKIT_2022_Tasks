@@ -5,7 +5,6 @@ from gen_random import gen_random
 from print_result import print_result
 from field import field
 from unique import Unique
-import os
 
 path = 'lab3_4/lab_python_fp/data_light.json'
 with open(path, encoding='UTF8') as f:
